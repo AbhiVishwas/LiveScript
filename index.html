@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Simple Speech Recognition</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <h1>LiveScript</h1>
-    <div id="container">
-        <div id="transcript">Transcript will appear here</div>
-        <div>
-            <button id="start">Start Listening</button>
-            <button id="stop">Stop Listening</button>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>LiveScript - Sales Empowerment</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Add your custom styles here */
+    .resume-block {
+      margin-top: 40px;
+      border-top: 2px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .resume-content {
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      border: solid 1px #ccc;
+      padding: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>LiveScript</h1>
+  <div id="container">
+    <section id="transcript">
+      <h2>Live Transcript:</h2>
+      <div class="transcript-container">Transcript will appear here</div>
+    </section>
+  
+    <section id="trigger">
+      <h2>Add Trigger Words</h2>
+      <div class="trigger-container">
+        <input type="text" id="trigger-input" placeholder="Enter trigger word">
+        <button id="add-trigger">Add Trigger Word</button>
+      </div>
+      <ul id="trigger-list"></ul>
+    </section>
+    
+    <section id="controls">
+      <h2>Start Recording</h2>
+      <div class="controls-container">
+        <button id="start">Start Listening</button>
+        <button id="stop">Stop Listening</button>
+      </div>
+    </section>
+  
+    
+
+    <section id="resume">
+      <h2>Transcript History</h2>
+      <div id="resume-container"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
